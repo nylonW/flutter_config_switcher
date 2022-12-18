@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "327982515795",
+    "project_id": "fryzjer-essa",
+    "storage_bucket": "fryzjer-essa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327982515795:android:c796914fbe487fb43028a6",
+        "android_client_info": {
+          "package_name": "pl.fcs.fryzjer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327982515795-ofv6hrbdp6dq4h3nipn91nejfmjnjn1p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcuNBZHVdkCpfUFS50dDKEcBBVKLE0Rl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327982515795-ofv6hrbdp6dq4h3nipn91nejfmjnjn1p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "327982515795-3ae3brkfa7400pkc50ebom5coh7p2890.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "pl.loyaltyclub.fryzjer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327982515795:android:cddf91c80b5cbf2e3028a6",
+        "android_client_info": {
+          "package_name": "pl.loyaltyclub.fryzjer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327982515795-ofv6hrbdp6dq4h3nipn91nejfmjnjn1p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcuNBZHVdkCpfUFS50dDKEcBBVKLE0Rl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327982515795-ofv6hrbdp6dq4h3nipn91nejfmjnjn1p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "327982515795-3ae3brkfa7400pkc50ebom5coh7p2890.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "pl.loyaltyclub.fryzjer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
