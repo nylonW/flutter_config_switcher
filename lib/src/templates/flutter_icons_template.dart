@@ -1,0 +1,6 @@
+const String flutterIconsTemplate = '''
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "app_targets/current.jpg"
+''';

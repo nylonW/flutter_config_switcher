@@ -1,0 +1,32 @@
+[
+	{
+		"flavor": "blue",
+		"title": "App Blue",
+		"bundleName": "com.fcs.blue",
+		"icon": "blue.jpg",
+		"firebaseConfig": {
+			"email": "<GOOGLE-ACCOUNT-EMAIL>",
+			"project": "app-blue-123"
+		},
+		"args": [
+			"FB_ID=123456789f",
+			"FB_CLIENT_TOKEN=123456789f",
+			"APP_ID=abc123f"
+		]
+	},
+	{
+		"flavor": "green",
+		"title": "App Green",
+		"bundleName": "com.fcs.green",
+		"icon": "green.jpg",
+		"firebaseConfig": {
+			"email": "mrvrota@gmail.com",
+			"project": "app-green-123"
+		},
+		"args": [
+			"FB_ID=123456789k",
+			"FB_CLIENT_TOKEN=123456789k",
+			"APP_ID=abc123k"
+		]
+	}
+]

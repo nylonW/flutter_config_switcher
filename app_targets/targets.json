@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Example",
+    "bundleName": "com.example.fcsexample",
+    "flavor": "example",
+    "icon": "example.jpg",
+    "args": [
+      "FB_ID=123456789",
+      "FB_CLIENT_TOKEN=123456789",
+      "APP_ID=id123abc"
+    ],
+    "firebaseConfig": null
+  }
+]
