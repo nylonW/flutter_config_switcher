@@ -5,6 +5,7 @@
 .packages
 build/
 pubspec.lock
+firebase_options.dart
 
 # Files generated during tests
 .test_coverage.dart
