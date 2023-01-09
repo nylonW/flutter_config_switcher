@@ -20,7 +20,7 @@
 		"bundleName": "com.fcs.green",
 		"icon": "green.jpg",
 		"firebaseConfig": {
-			"email": "mrvrota@gmail.com",
+			"email": "<GOOGLE-ACCOUNT-EMAIL>",
 			"project": "app-green-123"
 		},
 		"args": [

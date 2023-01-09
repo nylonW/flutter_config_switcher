@@ -21,7 +21,7 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-def dartEnvironmentVariables = [
+def dartVariables = [
     APP_TITLE: '',
     APP_ID: '',
     APP_FLAVOR: '',
@@ -31,7 +31,7 @@ def dartEnvironmentVariables = [
 ];
 
 if (project.hasProperty('dart-defines')) {
-    dartEnvironmentVariables = dartEnvironmentVariables + project.property('dart-defines')
+    dartVariables = dartVariables + project.property('dart-defines')
         .split(',')
         .collectEntries { entry ->
             def pair = new String(entry.decodeBase64(), 'UTF-8').split('=')
@@ -83,16 +83,16 @@ android {
 
     productFlavors {
         prod {
-            resValue "string", "app_name", dartEnvironmentVariables.APP_TITLE
-            resValue "string", "facebook_app_id", dartEnvironmentVariables.FB_ID
-            resValue "string", "fb_login_protocol_scheme", "fb${dartEnvironmentVariables.FB_ID}" 
-            resValue "string", "facebook_client_token", dartEnvironmentVariables.FB_CLIENT_TOKEN
-            applicationId dartEnvironmentVariables.APP_BUNDLE_NAME
+            resValue "string", "app_name", dartVariables.APP_TITLE
+            resValue "string", "facebook_app_id", dartVariables.FB_ID
+            resValue "string", "fb_login_protocol_scheme", "fb${dartVariables.FB_ID}" 
+            resValue "string", "facebook_client_token", dartVariables.FB_CLIENT_TOKEN
+            applicationId dartVariables.APP_BUNDLE_NAME
             manifestPlaceholders = [
-                deepLinkScheme: "app${dartEnvironmentVariables.APP_ID}"
+                deepLinkScheme: "app${dartVariables.APP_ID}"
             ]
             dimension "normal"
-        } 
+        }
     }
 }
 
