@@ -63,7 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '327982515795',
     projectId: 'fryzjer-essa',
     storageBucket: 'fryzjer-essa.appspot.com',
-    iosClientId: '327982515795-fu1pui5gqv9ls3ke0njoftljhslnuuu1.apps.googleusercontent.com',
+    iosClientId:
+        '327982515795-fu1pui5gqv9ls3ke0njoftljhslnuuu1.apps.googleusercontent.com',
     iosBundleId: 'pl.fcs.fryzjer',
   );
 }

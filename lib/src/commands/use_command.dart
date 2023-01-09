@@ -59,8 +59,8 @@ class UseCommand extends Command<int> {
     final iconsCreated = await generateIcons(target);
     final firebaseConfigured = await configureFirebase(target);
     _logger
-    ..info('Icons created: $iconsCreated')
-    ..info('Firebase configured: $firebaseConfigured');
+      ..info('Icons created: $iconsCreated')
+      ..info('Firebase configured: $firebaseConfigured');
 
     return ExitCode.success.code;
   }
