@@ -40,13 +40,12 @@ class BuildCommand extends Command<int> {
     return buildTypes
         .map(
           (e) => '''
-  fvm flutter build $e --release -t lib/main/main.dart \\
-  --obfuscate --split-debug-info=maps/debug_${target.flavor} \\
-  --dart-define=APP_TITLE="${target.title}" \\
-  --dart-define=APP_FLAVOR="${target.flavor}" \\
-  ${target.args.map((e) => '--dart-define=$e').join(' \\ \n')}
-  ''',
-        )
+fvm flutter build $e --release -t lib/main/main.dart \\
+--obfuscate --split-debug-info=maps/debug_${target.flavor} \\
+--dart-define=APP_TITLE="${target.title}" \\
+--dart-define=APP_FLAVOR="${target.flavor}" \\
+${target.args.map((e) => '--dart-define=$e').join(' \\ \n')}''',
+)
         .join('\n\n');
   }
 
