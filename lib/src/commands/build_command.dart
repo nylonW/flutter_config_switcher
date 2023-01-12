@@ -40,7 +40,7 @@ class BuildCommand extends Command<int> {
     return buildTypes
         .map(
           (e) =>
-              'fvm flutter build $e --release -t lib/main/main.dart --obfuscate --split-debug-info=maps/debug_${target.flavor} --dart-define=APP_TITLE="${target.title}" --dart-define=APP_FLAVOR="${target.flavor}" --dart-define=BUNDLE_NAME="${target.bundleName}" ${target.args.map((e) => '--dart-define=$e').join(' ')}',
+              'fvm flutter build $e --release --prod -t lib/main/main.dart --obfuscate --split-debug-info=maps/debug_${target.flavor} --dart-define=APP_TITLE="${target.title}" --dart-define=APP_FLAVOR="${target.flavor}" --dart-define=BUNDLE_NAME="${target.bundleName}" ${target.args.map((e) => '--dart-define=$e').join(' ')}',
         )
         .join('\n\n');
   }
