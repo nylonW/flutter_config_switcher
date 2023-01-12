@@ -40,7 +40,6 @@ class FlutterConfigSwitcherCommandRunner extends CommandRunner<int> {
     // Add sub commands
     addCommand(SampleCommand(logger: _logger));
     addCommand(UpdateCommand(logger: _logger, pubUpdater: _pubUpdater));
-    addCommand(UseCommand(logger: _logger));
     addCommand(BuildCommand(logger: _logger));
   }
 

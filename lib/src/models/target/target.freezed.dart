@@ -23,9 +23,7 @@ mixin _$Target {
   String get title => throw _privateConstructorUsedError;
   String get bundleName => throw _privateConstructorUsedError;
   String get flavor => throw _privateConstructorUsedError;
-  String get icon => throw _privateConstructorUsedError;
   List<String> get args => throw _privateConstructorUsedError;
-  FirebaseConfig? get firebaseConfig => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,14 +36,7 @@ abstract class $TargetCopyWith<$Res> {
       _$TargetCopyWithImpl<$Res, Target>;
   @useResult
   $Res call(
-      {String title,
-      String bundleName,
-      String flavor,
-      String icon,
-      List<String> args,
-      FirebaseConfig? firebaseConfig});
-
-  $FirebaseConfigCopyWith<$Res>? get firebaseConfig;
+      {String title, String bundleName, String flavor, List<String> args});
 }
 
 /// @nodoc
@@ -64,9 +55,7 @@ class _$TargetCopyWithImpl<$Res, $Val extends Target>
     Object? title = null,
     Object? bundleName = null,
     Object? flavor = null,
-    Object? icon = null,
     Object? args = null,
-    Object? firebaseConfig = freezed,
   }) {
     return _then(_value.copyWith(
       title: null == title
@@ -81,31 +70,11 @@ class _$TargetCopyWithImpl<$Res, $Val extends Target>
           ? _value.flavor
           : flavor // ignore: cast_nullable_to_non_nullable
               as String,
-      icon: null == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String,
       args: null == args
           ? _value.args
           : args // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      firebaseConfig: freezed == firebaseConfig
-          ? _value.firebaseConfig
-          : firebaseConfig // ignore: cast_nullable_to_non_nullable
-              as FirebaseConfig?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $FirebaseConfigCopyWith<$Res>? get firebaseConfig {
-    if (_value.firebaseConfig == null) {
-      return null;
-    }
-
-    return $FirebaseConfigCopyWith<$Res>(_value.firebaseConfig!, (value) {
-      return _then(_value.copyWith(firebaseConfig: value) as $Val);
-    });
   }
 }
 
@@ -116,15 +85,7 @@ abstract class _$$_TargetCopyWith<$Res> implements $TargetCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String title,
-      String bundleName,
-      String flavor,
-      String icon,
-      List<String> args,
-      FirebaseConfig? firebaseConfig});
-
-  @override
-  $FirebaseConfigCopyWith<$Res>? get firebaseConfig;
+      {String title, String bundleName, String flavor, List<String> args});
 }
 
 /// @nodoc
@@ -140,9 +101,7 @@ class __$$_TargetCopyWithImpl<$Res>
     Object? title = null,
     Object? bundleName = null,
     Object? flavor = null,
-    Object? icon = null,
     Object? args = null,
-    Object? firebaseConfig = freezed,
   }) {
     return _then(_$_Target(
       title: null == title
@@ -157,18 +116,10 @@ class __$$_TargetCopyWithImpl<$Res>
           ? _value.flavor
           : flavor // ignore: cast_nullable_to_non_nullable
               as String,
-      icon: null == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String,
       args: null == args
           ? _value._args
           : args // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      firebaseConfig: freezed == firebaseConfig
-          ? _value.firebaseConfig
-          : firebaseConfig // ignore: cast_nullable_to_non_nullable
-              as FirebaseConfig?,
     ));
   }
 }
@@ -180,9 +131,7 @@ class _$_Target implements _Target {
       {required this.title,
       required this.bundleName,
       required this.flavor,
-      required this.icon,
-      required final List<String> args,
-      required this.firebaseConfig})
+      required final List<String> args})
       : _args = args;
 
   factory _$_Target.fromJson(Map<String, dynamic> json) =>
@@ -194,8 +143,6 @@ class _$_Target implements _Target {
   final String bundleName;
   @override
   final String flavor;
-  @override
-  final String icon;
   final List<String> _args;
   @override
   List<String> get args {
@@ -205,11 +152,8 @@ class _$_Target implements _Target {
   }
 
   @override
-  final FirebaseConfig? firebaseConfig;
-
-  @override
   String toString() {
-    return 'Target(title: $title, bundleName: $bundleName, flavor: $flavor, icon: $icon, args: $args, firebaseConfig: $firebaseConfig)';
+    return 'Target(title: $title, bundleName: $bundleName, flavor: $flavor, args: $args)';
   }
 
   @override
@@ -221,16 +165,13 @@ class _$_Target implements _Target {
             (identical(other.bundleName, bundleName) ||
                 other.bundleName == bundleName) &&
             (identical(other.flavor, flavor) || other.flavor == flavor) &&
-            (identical(other.icon, icon) || other.icon == icon) &&
-            const DeepCollectionEquality().equals(other._args, _args) &&
-            (identical(other.firebaseConfig, firebaseConfig) ||
-                other.firebaseConfig == firebaseConfig));
+            const DeepCollectionEquality().equals(other._args, _args));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, bundleName, flavor, icon,
-      const DeepCollectionEquality().hash(_args), firebaseConfig);
+  int get hashCode => Object.hash(runtimeType, title, bundleName, flavor,
+      const DeepCollectionEquality().hash(_args));
 
   @JsonKey(ignore: true)
   @override
@@ -251,9 +192,7 @@ abstract class _Target implements Target {
       {required final String title,
       required final String bundleName,
       required final String flavor,
-      required final String icon,
-      required final List<String> args,
-      required final FirebaseConfig? firebaseConfig}) = _$_Target;
+      required final List<String> args}) = _$_Target;
 
   factory _Target.fromJson(Map<String, dynamic> json) = _$_Target.fromJson;
 
@@ -264,11 +203,7 @@ abstract class _Target implements Target {
   @override
   String get flavor;
   @override
-  String get icon;
-  @override
   List<String> get args;
-  @override
-  FirebaseConfig? get firebaseConfig;
   @override
   @JsonKey(ignore: true)
   _$$_TargetCopyWith<_$_Target> get copyWith =>
