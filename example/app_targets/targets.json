@@ -1,32 +1,20 @@
 [
 	{
-		"flavor": "blue",
-		"title": "App Blue",
-		"bundleName": "com.fcs.blue",
-		"icon": "blue.jpg",
-		"firebaseConfig": {
-			"email": "<GOOGLE-ACCOUNT-EMAIL>",
-			"project": "app-blue-123"
-		},
-		"args": [
-			"FB_ID=123456789f",
-			"FB_CLIENT_TOKEN=123456789f",
-			"APP_ID=abc123f"
-		]
+		"APP_FLAVOR": "blue",
+		"DIMENSION": "production",
+		"APP_TITLE": "App Blue",
+		"BUNDLE_NAME": "com.fcs.blue",
+		"FB_ID": "123456789f",
+		"FB_CLIENT_TOKEN": "123456789f",
+		"APP_ID": "abc123f"
 	},
 	{
-		"flavor": "green",
-		"title": "App Green",
-		"bundleName": "com.fcs.green",
-		"icon": "green.jpg",
-		"firebaseConfig": {
-			"email": "<GOOGLE-ACCOUNT-EMAIL>",
-			"project": "app-green-123"
-		},
-		"args": [
-			"FB_ID=123456789k",
-			"FB_CLIENT_TOKEN=123456789k",
-			"APP_ID=abc123k"
-		]
+		"APP_FLAVOR": "green",
+		"DIMENSION": "development",
+		"APP_TITLE": "App Green",
+		"BUNDLE_NAME": "com.fcs.green",
+		"FB_ID": "123456789gf",
+		"FB_CLIENT_TOKEN": "123456789gf",
+		"APP_ID": "abc123gf"
 	}
 ]
