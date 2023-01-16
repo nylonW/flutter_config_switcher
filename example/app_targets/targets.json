@@ -6,7 +6,8 @@
 		"BUNDLE_NAME": "com.fcs.blue",
 		"FB_ID": "123456789f",
 		"FB_CLIENT_TOKEN": "123456789f",
-		"APP_ID": "abc123f"
+		"APP_ID": "abc123f",
+		"LANGUAGE_SELECTION": true
 	},
 	{
 		"APP_FLAVOR": "green",
