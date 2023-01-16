@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:args/command_runner.dart';
 import 'package:collection/collection.dart';
-import 'package:flutter_config_switcher/src/models/target/target.dart';
 import 'package:flutter_config_switcher/src/templates/flutter_icons_template.dart';
 import 'package:mason_logger/mason_logger.dart';
 import 'package:path/path.dart' as path;
@@ -62,7 +61,7 @@ class SampleCommand extends Command<int> {
         ..writeAsStringSync(flutterIconsTemplate);
       targetsFile
         ..createSync(recursive: true)
-        ..writeAsStringSync(encoder.convert([Target.example().toJson()]));
+        ..writeAsStringSync(encoder.convert([]));
       return true;
     }
     return false;

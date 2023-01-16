@@ -1,7 +1,13 @@
 import 'package:args/command_runner.dart';
-import 'package:flutter_config_switcher/src/models/target/target.dart';
 import 'package:flutter_config_switcher/src/utils/target_helper.dart';
 import 'package:mason_logger/mason_logger.dart';
+
+enum BuildType {
+  apk,
+  ipa,
+  appbundle,
+  ios,
+}
 
 class BuildCommand extends Command<int> {
   BuildCommand({
@@ -19,10 +25,7 @@ class BuildCommand extends Command<int> {
 
   @override
   Future<int> run() async {
-    _logger.info('Running build command');
     final currentFlavor = getFlavor();
-
-    _logger.info('Current flavor: $currentFlavor \n');
 
     final target = TargetHelper.getTarget(flavor: currentFlavor);
     if (target == null) {
@@ -34,15 +37,12 @@ class BuildCommand extends Command<int> {
     return ExitCode.success.code;
   }
 
-  String buildCommand(Target target) {
-    final buildTypes = <String>['appbundle', 'apk', 'ipa'];
+  String buildCommand(Map<String, dynamic> target) {
+    final buildType = getBuildType().name;
+    final dimension = target['DIMENSION'] ?? 'production';
 
-    return buildTypes
-        .map(
-          (e) =>
-              'fvm flutter build $e --release --flavor=prod -t lib/main/main.dart --obfuscate --split-debug-info=maps/debug_${target.flavor} --dart-define=APP_TITLE="${target.title}" --dart-define=APP_FLAVOR="${target.flavor}" --dart-define=BUNDLE_NAME="${target.bundleName}" ${target.args.map((e) => '--dart-define=$e').join(' ')}',
-        )
-        .join('\n\n');
+    return 
+    'fvm flutter build $buildType --release --flavor=$dimension -t lib/main/main.dart --obfuscate --split-debug-info=maps/debug_${target['APP_FLAVOR']} ${target.entries.map((entry) => '--dart-define=${entry.key}=${entry.value}').toList().join(' ')}';
   }
 
   String getFlavor() {
@@ -51,5 +51,19 @@ class BuildCommand extends Command<int> {
     }
 
     return argResults!.rest.first;
+  }
+
+  BuildType getBuildType() {
+    if (argResults!.rest.length < 2) {
+      return BuildType.apk;
+    }
+
+    return BuildType.values.firstWhere(
+      (buildType) => buildType.name == argResults!.rest[1],
+      orElse: () => throw UsageException(
+        'Invalid build type, eg. apk, ios, appbundle',
+        usage,
+      ),
+    );
   }
 }
