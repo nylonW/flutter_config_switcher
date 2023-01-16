@@ -1,7 +1,6 @@
 [
 	{
 		"APP_FLAVOR": "blue",
-		"DIMENSION": "production",
 		"APP_TITLE": "App Blue",
 		"BUNDLE_NAME": "com.fcs.blue",
 		"FB_ID": "123456789f",
@@ -11,7 +10,6 @@
 	},
 	{
 		"APP_FLAVOR": "green",
-		"DIMENSION": "development",
 		"APP_TITLE": "App Green",
 		"BUNDLE_NAME": "com.fcs.green",
 		"FB_ID": "123456789gf",
