@@ -41,8 +41,10 @@ class BuildCommand extends Command<int> {
     final buildType = getBuildType().name;
     final dimension = target['DIMENSION'] ?? 'production';
 
-    return 
-    'fvm flutter build $buildType --release --flavor=$dimension -t lib/main/main.dart --obfuscate --split-debug-info=maps/debug_${target['APP_FLAVOR']} ${target.entries.map((entry) => '--dart-define=${entry.key}=${entry.value}').toList().join(' ')}';
+    return 'fvm flutter build $buildType --release --flavor=$dimension -t lib/main/main.dart --obfuscate --split-debug-info=maps/debug_${target['APP_FLAVOR']} ${target.entries.map(
+          (entry) =>
+              '--dart-define=${entry.key}=${entry.value is String ? '"${entry.value}"' : entry.value}',
+        ).toList().join(' ')}';
   }
 
   String getFlavor() {
