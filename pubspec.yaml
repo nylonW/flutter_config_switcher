@@ -16,10 +16,10 @@ dependencies:
   pub_updater: ^0.2.1
 
 dev_dependencies:
-  flutter_launcher_icons: "^0.11.0"
   build_runner: ^2.0.0
   build_verify: ^3.0.0
   build_version: ^2.0.0
+  flutter_launcher_icons: "^0.11.0"
   freezed: ^2.3.2
   json_serializable: ^6.5.4
   mocktail: ^0.3.0
@@ -27,4 +27,4 @@ dev_dependencies:
   very_good_analysis: ^3.1.0
 
 executables:
-  flutter_config_switcher:
+  ? flutter_config_switcher
