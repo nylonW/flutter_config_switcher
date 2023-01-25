@@ -1,6 +1,7 @@
 import 'package:args/args.dart';
 import 'package:args/command_runner.dart';
 import 'package:flutter_config_switcher/src/commands/commands.dart';
+import 'package:flutter_config_switcher/src/commands/get_app_name_command.dart';
 import 'package:flutter_config_switcher/src/version.dart';
 import 'package:mason_logger/mason_logger.dart';
 import 'package:pub_updater/pub_updater.dart';
@@ -42,6 +43,7 @@ class FlutterConfigSwitcherCommandRunner extends CommandRunner<int> {
     addCommand(UpdateCommand(logger: _logger, pubUpdater: _pubUpdater));
     addCommand(BuildCommand(logger: _logger));
     addCommand(GetBundleNameCommand(logger: _logger));
+    addCommand(GetAppNameCommand(logger: _logger));
   }
 
   @override
