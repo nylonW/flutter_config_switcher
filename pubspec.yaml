@@ -24,7 +24,7 @@ dev_dependencies:
   json_serializable: ^6.5.4
   mocktail: ^0.3.0
   test: ^1.19.2
-  very_good_analysis: ^3.1.0
+  very_good_analysis: ^4.0.0+1
 
 executables:
   ? flutter_config_switcher
